@@ -6,6 +6,8 @@ function App() {
       <h1>Welcome to The Project</h1>
 
       <p> AMAR</p>
+
+      <p>Sanjay</p>
     </>
   );
 }
