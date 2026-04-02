@@ -1,115 +1,485 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Amarnathan V",
-      "email": "amarnathan.v@example.com",
-      "DOB": "2003-05-15",
-      "phoneNo": "+91-9876543210",
-      "password": "securePass123!"
+      "id": "usr101",
+      "name": "Amarnathan",
+      "email": "amarnathan@example.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "usr102",
+      "name": "Rahul Kumar",
+      "email": "rahul@example.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "usr103",
+      "name": "Priya S",
+      "email": "priya@example.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "adm101",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
     }
   ],
   "events": [
-    [
-      {
-        "id": "EVENT20260424",
-        "name": "IPL Match: CSK vs MI",
-        "date": "2026-05-10T19:30:00+05:30",
-        "venue": "MA Chidambaram Stadium, Chennai",
-        "description": "Exciting clash in Indian Premier League 2026 between Chennai Super Kings and Mumbai Indians.",
-        "ticketPrice": 2500,
-        "availableSeats": ["A1", "A5", "B2", "C3", "D4"],
-        "posterUrl": "https://example.com/images/ipl-csk-vs-mi-poster.jpg",
-        "bannerUrl": "https://example.com/images/ipl-csk-vs-mi-banner.jpg"
-      },
-      {
-        "id": "EVENT20260425",
-        "name": "Movie Premiere: Avengers Reborn",
-        "date": "2026-06-01T18:00:00+05:30",
-        "venue": "PVR Cinemas, Chennai",
-        "description": "Grand premiere of the much-awaited Marvel movie Avengers Reborn.",
-        "ticketPrice": 799,
-        "availableSeats": ["P1", "P2", "P3", "P4", "P5"],
-        "posterUrl": "https://example.com/images/avengers-reborn-poster.jpg",
-        "bannerUrl": "https://example.com/images/avengers-reborn-banner.jpg"
-      },
-      {
-        "id": "EVENT20260426",
-        "name": "AR Rahman Live Concert",
-        "date": "2026-05-20T19:00:00+05:30",
-        "venue": "Jawaharlal Nehru Stadium, Chennai",
-        "description": "Live musical night with A. R. Rahman.",
-        "ticketPrice": 4999,
-        "availableSeats": ["VIP1", "VIP2", "G1", "G2", "G3"],
-        "posterUrl": "https://example.com/images/ar-rahman-concert-poster.jpg",
-        "bannerUrl": "https://example.com/images/ar-rahman-concert-banner.jpg"
-      },
-      {
-        "id": "EVENT20260427",
-        "name": "Stand-up Comedy Night",
-        "date": "2026-05-18T20:00:00+05:30",
-        "venue": "Phoenix Marketcity, Chennai",
-        "description": "Laugh out loud with top Indian comedians in a live stand-up show.",
-        "ticketPrice": 999,
-        "availableSeats": ["S1", "S2", "S3", "S4", "S5"],
-        "posterUrl": "https://example.com/images/comedy-night-poster.jpg",
-        "bannerUrl": "https://example.com/images/comedy-night-banner.jpg"
-      },
-      {
-        "id": "EVENT20260428",
-        "name": "Tech Conference 2026",
-        "date": "2026-06-10T10:00:00+05:30",
-        "venue": "Chennai Trade Centre",
-        "description": "Explore AI, ML, and future tech innovations with industry experts.",
-        "ticketPrice": 1999,
-        "availableSeats": ["T1", "T2", "T3", "T4", "T5"],
-        "posterUrl": "https://example.com/images/tech-conference-poster.jpg",
-        "bannerUrl": "https://example.com/images/tech-conference-banner.jpg"
-      },
-      {
-        "id": "EVENT20260429",
-        "name": "Movie Release: Leo 2",
-        "date": "2026-07-15T09:00:00+05:30",
-        "venue": "Rohini Theatre, Chennai",
-        "description": "First day first show of Leo 2 starring Vijay.",
-        "ticketPrice": 500,
-        "availableSeats": ["F1", "F2", "F3", "F4", "F5"],
-        "posterUrl": "https://example.com/images/leo2-poster.jpg",
-        "bannerUrl": "https://example.com/images/leo2-banner.jpg"
-      },
-      {
-        "id": "EVENT20260430",
-        "name": "EDM Night Festival",
-        "date": "2026-06-25T21:00:00+05:30",
-        "venue": "ECR Beach Arena, Chennai",
-        "description": "High-energy EDM party featuring international DJs and light shows.",
-        "ticketPrice": 2999,
-        "availableSeats": ["E1", "E2", "E3", "E4", "E5"],
-        "posterUrl": "https://example.com/images/edm-night-poster.jpg",
-        "bannerUrl": "https://example.com/images/edm-night-banner.jpg"
-      },
-      {
-        "id": "EVENT20260501",
-        "name": "IPL Match: RCB vs KKR",
-        "date": "2026-05-13T19:30:00+05:30",
-        "venue": "M Chinnaswamy Stadium, Bangalore",
-        "description": "Thrilling IPL match between Royal Challengers Bangalore and Kolkata Knight Riders.",
-        "ticketPrice": 2200,
-        "availableSeats": ["R1", "R2", "R3", "R4", "R5"],
-        "posterUrl": "https://example.com/images/rcb-vs-kkr-poster.jpg",
-        "bannerUrl": "https://example.com/images/rcb-vs-kkr-banner.jpg"
-      }
-    ]
+    {
+      "id": "evt101",
+      "title": "Chennai Music Night 2026",
+      "category": "Concert",
+      "venue": "Jawaharlal Nehru Indoor Stadium",
+      "city": "Chennai",
+      "dateTime": "2026-05-18T18:30:00",
+      "description": "A live music concert featuring top independent artists and bands.",
+      "price": 799,
+      "posterUrl": "/images/chennai-music-night.jpg",
+      "status": "published",
+      "totalSeats": 30,
+      "availableSeats": 24,
+      "seatMap": [
+        {
+          "id": "A1",
+          "row": "A",
+          "number": 1,
+          "type": "VIP",
+          "price": 1299,
+          "status": "available"
+        },
+        {
+          "id": "A2",
+          "row": "A",
+          "number": 2,
+          "type": "VIP",
+          "price": 1299,
+          "status": "booked"
+        },
+        {
+          "id": "A3",
+          "row": "A",
+          "number": 3,
+          "type": "VIP",
+          "price": 1299,
+          "status": "available"
+        },
+        {
+          "id": "A4",
+          "row": "A",
+          "number": 4,
+          "type": "VIP",
+          "price": 1299,
+          "status": "available"
+        },
+
+        {
+          "id": "B1",
+          "row": "B",
+          "number": 1,
+          "type": "Regular",
+          "price": 799,
+          "status": "available"
+        },
+        {
+          "id": "B2",
+          "row": "B",
+          "number": 2,
+          "type": "Regular",
+          "price": 799,
+          "status": "available"
+        },
+        {
+          "id": "B3",
+          "row": "B",
+          "number": 3,
+          "type": "Regular",
+          "price": 799,
+          "status": "booked"
+        },
+        {
+          "id": "B4",
+          "row": "B",
+          "number": 4,
+          "type": "Regular",
+          "price": 799,
+          "status": "available"
+        },
+
+        {
+          "id": "C1",
+          "row": "C",
+          "number": 1,
+          "type": "Regular",
+          "price": 799,
+          "status": "available"
+        },
+        {
+          "id": "C2",
+          "row": "C",
+          "number": 2,
+          "type": "Regular",
+          "price": 799,
+          "status": "blocked"
+        },
+        {
+          "id": "C3",
+          "row": "C",
+          "number": 3,
+          "type": "Regular",
+          "price": 799,
+          "status": "available"
+        },
+        {
+          "id": "C4",
+          "row": "C",
+          "number": 4,
+          "type": "Regular",
+          "price": 799,
+          "status": "available"
+        },
+
+        {
+          "id": "D1",
+          "row": "D",
+          "number": 1,
+          "type": "Economy",
+          "price": 499,
+          "status": "available"
+        },
+        {
+          "id": "D2",
+          "row": "D",
+          "number": 2,
+          "type": "Economy",
+          "price": 499,
+          "status": "available"
+        },
+        {
+          "id": "D3",
+          "row": "D",
+          "number": 3,
+          "type": "Economy",
+          "price": 499,
+          "status": "booked"
+        },
+        {
+          "id": "D4",
+          "row": "D",
+          "number": 4,
+          "type": "Economy",
+          "price": 499,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "evt102",
+      "title": "Startup & Tech Summit",
+      "category": "Conference",
+      "venue": "Chennai Trade Centre",
+      "city": "Chennai",
+      "dateTime": "2026-06-02T10:00:00",
+      "description": "A one-day technology and startup conference with speakers, networking, and workshops.",
+      "price": 999,
+      "posterUrl": "/images/startup-tech-summit.jpg",
+      "status": "published",
+      "totalSeats": 20,
+      "availableSeats": 16,
+      "seatMap": [
+        {
+          "id": "A1",
+          "row": "A",
+          "number": 1,
+          "type": "Premium",
+          "price": 1499,
+          "status": "available"
+        },
+        {
+          "id": "A2",
+          "row": "A",
+          "number": 2,
+          "type": "Premium",
+          "price": 1499,
+          "status": "booked"
+        },
+        {
+          "id": "A3",
+          "row": "A",
+          "number": 3,
+          "type": "Premium",
+          "price": 1499,
+          "status": "available"
+        },
+        {
+          "id": "A4",
+          "row": "A",
+          "number": 4,
+          "type": "Premium",
+          "price": 1499,
+          "status": "available"
+        },
+
+        {
+          "id": "B1",
+          "row": "B",
+          "number": 1,
+          "type": "Standard",
+          "price": 999,
+          "status": "available"
+        },
+        {
+          "id": "B2",
+          "row": "B",
+          "number": 2,
+          "type": "Standard",
+          "price": 999,
+          "status": "available"
+        },
+        {
+          "id": "B3",
+          "row": "B",
+          "number": 3,
+          "type": "Standard",
+          "price": 999,
+          "status": "booked"
+        },
+        {
+          "id": "B4",
+          "row": "B",
+          "number": 4,
+          "type": "Standard",
+          "price": 999,
+          "status": "available"
+        },
+
+        {
+          "id": "C1",
+          "row": "C",
+          "number": 1,
+          "type": "Standard",
+          "price": 999,
+          "status": "available"
+        },
+        {
+          "id": "C2",
+          "row": "C",
+          "number": 2,
+          "type": "Standard",
+          "price": 999,
+          "status": "available"
+        },
+        {
+          "id": "C3",
+          "row": "C",
+          "number": 3,
+          "type": "Standard",
+          "price": 999,
+          "status": "available"
+        },
+        {
+          "id": "C4",
+          "row": "C",
+          "number": 4,
+          "type": "Standard",
+          "price": 999,
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "evt103",
+      "title": "IPL Fan Park Screening",
+      "category": "Sports",
+      "venue": "YMCA Grounds",
+      "city": "Chennai",
+      "dateTime": "2026-05-25T19:00:00",
+      "description": "Live big-screen cricket screening with food stalls, fan contests, and music.",
+      "price": 299,
+      "posterUrl": "/images/ipl-fan-park.jpg",
+      "status": "published",
+      "totalSeats": 16,
+      "availableSeats": 13,
+      "seatMap": [
+        {
+          "id": "A1",
+          "row": "A",
+          "number": 1,
+          "type": "Fan Zone",
+          "price": 499,
+          "status": "available"
+        },
+        {
+          "id": "A2",
+          "row": "A",
+          "number": 2,
+          "type": "Fan Zone",
+          "price": 499,
+          "status": "available"
+        },
+        {
+          "id": "A3",
+          "row": "A",
+          "number": 3,
+          "type": "Fan Zone",
+          "price": 499,
+          "status": "booked"
+        },
+        {
+          "id": "A4",
+          "row": "A",
+          "number": 4,
+          "type": "Fan Zone",
+          "price": 499,
+          "status": "available"
+        },
+
+        {
+          "id": "B1",
+          "row": "B",
+          "number": 1,
+          "type": "General",
+          "price": 299,
+          "status": "available"
+        },
+        {
+          "id": "B2",
+          "row": "B",
+          "number": 2,
+          "type": "General",
+          "price": 299,
+          "status": "blocked"
+        },
+        {
+          "id": "B3",
+          "row": "B",
+          "number": 3,
+          "type": "General",
+          "price": 299,
+          "status": "available"
+        },
+        {
+          "id": "B4",
+          "row": "B",
+          "number": 4,
+          "type": "General",
+          "price": 299,
+          "status": "available"
+        },
+
+        {
+          "id": "C1",
+          "row": "C",
+          "number": 1,
+          "type": "General",
+          "price": 299,
+          "status": "available"
+        },
+        {
+          "id": "C2",
+          "row": "C",
+          "number": 2,
+          "type": "General",
+          "price": 299,
+          "status": "available"
+        },
+        {
+          "id": "C3",
+          "row": "C",
+          "number": 3,
+          "type": "General",
+          "price": 299,
+          "status": "available"
+        },
+        {
+          "id": "C4",
+          "row": "C",
+          "number": 4,
+          "type": "General",
+          "price": 299,
+          "status": "available"
+        }
+      ]
+    }
   ],
   "booking": [
     {
-      "id": "",
-      "userId": "",
-      "eventId": "",
-      "seats": [""],
-      "amount": 0,
-      "bookingStatus": "",
-      "createdAt": ""
+      "id": "bk1001",
+      "userId": "usr101",
+      "eventId": "evt101",
+      "eventTitle": "Chennai Music Night 2026",
+      "seats": ["A2"],
+      "amount": 1299,
+      "paymentStatus": "paid",
+      "bookingStatus": "confirmed",
+      "qrCodeData": "BOOKING:bk1001|EVENT:evt101|SEATS:A2",
+      "createdAt": "2026-04-01T10:30:00"
+    },
+    {
+      "id": "bk1002",
+      "userId": "usr102",
+      "eventId": "evt101",
+      "eventTitle": "Chennai Music Night 2026",
+      "seats": ["B3", "D3"],
+      "amount": 1298,
+      "paymentStatus": "paid",
+      "bookingStatus": "confirmed",
+      "qrCodeData": "BOOKING:bk1002|EVENT:evt101|SEATS:B3,D3",
+      "createdAt": "2026-04-01T14:15:00"
+    },
+    {
+      "id": "bk1003",
+      "userId": "usr103",
+      "eventId": "evt102",
+      "eventTitle": "Startup & Tech Summit",
+      "seats": ["A2"],
+      "amount": 1499,
+      "paymentStatus": "paid",
+      "bookingStatus": "confirmed",
+      "qrCodeData": "BOOKING:bk1003|EVENT:evt102|SEATS:A2",
+      "createdAt": "2026-04-02T09:00:00"
+    },
+    {
+      "id": "bk1004",
+      "userId": "usr101",
+      "eventId": "evt103",
+      "eventTitle": "IPL Fan Park Screening",
+      "seats": ["A3"],
+      "amount": 499,
+      "paymentStatus": "pending",
+      "bookingStatus": "reserved",
+      "qrCodeData": "BOOKING:bk1004|EVENT:evt103|SEATS:A3",
+      "createdAt": "2026-04-02T11:45:00"
+    }
+  ],
+  "analytics":{
+  "totalEvents": 3,
+  "totalBookings": 4,
+  "totalRevenue": 4595,
+  "ticketsSold": 5,
+  "bookingsPerEvent": [
+    {
+      "eventId": "evt101",
+      "title": "Chennai Music Night 2026",
+      "bookings": 2,
+      "revenue": 2597
+    },
+    {
+      "eventId": "evt102",
+      "title": "Startup & Tech Summit",
+      "bookings": 1,
+      "revenue": 1499
+    },
+    {
+      "eventId": "evt103",
+      "title": "IPL Fan Park Screening",
+      "bookings": 1,
+      "revenue": 499
     }
   ]
+}
 }
