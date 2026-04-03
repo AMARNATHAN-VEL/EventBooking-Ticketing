@@ -1,0 +1,73 @@
+.page { min-height: 100vh; background: #f9f9f7; }
+.container { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+
+.hero-banner {
+  background: #EEEDFE; border-radius: 12px;
+  padding: 2rem; margin-bottom: 2rem;
+}
+.hero-greeting { font-size: 13px; color: #534AB7; font-weight: 600; margin-bottom: 4px; }
+.hero-title { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+.hero-sub { font-size: 13px; color: #666; }
+.section-title { font-size: 17px; font-weight: 600; margin-bottom: 1rem; }
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.event-card {
+  background: #fff; border: 1px solid #e5e5e5;
+  border-radius: 12px; overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+.event-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.event-img {
+  height: 130px; display: flex;
+  align-items: center; justify-content: center; font-size: 40px;
+}
+.cat-music  { background: #EEEDFE; }
+.cat-sports { background: #EAF3DE; }
+.cat-comedy { background: #FAEEDA; }
+.cat-movie  { background: #E1F5EE; }
+.event-body { padding: 1rem; }
+.category-badge {
+  font-size: 11px; font-weight: 600; padding: 2px 8px;
+  border-radius: 20px; display: inline-block; margin-bottom: 8px;
+}
+.cat-music.category-badge  { background: #EEEDFE; color: #534AB7; }
+.cat-sports.category-badge { background: #EAF3DE; color: #3B6D11; }
+.cat-comedy.category-badge { background: #FAEEDA; color: #854F0B; }
+.cat-movie.category-badge  { background: #E1F5EE; color: #0F6E56; }
+.event-name { font-size: 15px; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
+.event-meta { font-size: 12px; color: #888; margin-bottom: 3px; }
+.event-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+.event-price { font-size: 16px; font-weight: 700; }
+.btn-book {
+  padding: 7px 16px; font-size: 13px; font-weight: 600;
+  background: #534AB7; color: #fff;
+  border: none; border-radius: 8px; cursor: pointer;
+}
+.btn-book:hover { background: #3C3489; }
+.btn-book.booked { background: #f0fdf4; color: #16a34a; cursor: default; }
+
+/* Bookings */
+.bookings-list { display: flex; flex-direction: column; gap: 10px; }
+.booking-item {
+  background: #fff; border: 1px solid #e5e5e5;
+  border-radius: 12px; padding: 1rem 1.25rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.booking-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.booking-name { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.booking-meta { font-size: 12px; color: #888; }
+.booking-id { font-size: 11px; color: #aaa; margin-top: 3px; }
+.booking-confirmed {
+  margin-left: auto; padding: 4px 12px; border-radius: 20px;
+  font-size: 12px; font-weight: 600;
+  background: #f0fdf4; color: #16a34a; white-space: nowrap;
+}
+.empty-state { text-align: center; padding: 3rem; color: #888; }
+.empty-state button { color: #534AB7; border: none; background: none; cursor: pointer; font-size: 14px; }
