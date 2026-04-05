@@ -1,6 +1,106 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useApi } from "../../hooks/useApi";
+import {
+  EVENT_PATH,
+  filterEvents,
+  getEventFilterOptions,
+  getVipRevenue,
+} from "../../services/eventService";
 
 const AdminEvents = () => {
+  const [events, setEvents] = useState([]);
+  const [error, setError] = useState(null);
+  const [filters, setFilters] = useState({
+    status: "",
+    category: "",
+    date: "",
+  });
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [deletingEvent, setDeletingEvent] = useState(null);
+  const [deleteLoading, setDeleteLoading] = useState(false);
+  const navigate = useNavigate();
+  const { get, del, loading } = useApi("http://localhost:3000");
+
+  useEffect(() => {
+    loadEvents();
+  }, []);
+
+  const loadEvents = async () => {
+    setError(null);
+
+    try {
+      const data = await get(EVENT_PATH);
+      setEvents(Array.isArray(data) ? data : []);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to load events");
+    }
+  };
+
+  const openDeleteModal = (event) => {
+    setError(null);
+    setDeletingEvent(event);
+    setShowDeleteModal(true);
+  };
+
+  const closeDeleteModal = () => {
+    if (deleteLoading) return;
+    setShowDeleteModal(false);
+    setDeletingEvent(null);
+  };
+
+  const handleDeleteConfirm = async () => {
+    if (!deletingEvent) return;
+
+    setDeleteLoading(true);
+    setError(null);
+
+    try {
+      await del(`${EVENT_PATH}/${deletingEvent.id}`);
+      await loadEvents();
+      closeDeleteModal();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unable to delete event");
+    } finally {
+      setDeleteLoading(false);
+    }
+  };
+
+  const handleEdit = (id) => {
+    navigate(`/admin/events/${id}/edit`);
+  };
+
+  const handleFilterChange = (field, value) => {
+    setFilters((current) => ({ ...current, [field]: value }));
+  };
+
+  const clearFilters = () => {
+    setFilters({ status: "", category: "", date: "" });
+  };
+
+  const filteredEvents = useMemo(
+    () => filterEvents(events, filters),
+    [events, filters],
+  );
+
+  const vipRevenue = useMemo(
+    () => filteredEvents.reduce((sum, event) => sum + getVipRevenue(event), 0),
+    [filteredEvents],
+  );
+
+  const { statuses, categories } = useMemo(
+    () => getEventFilterOptions(events),
+    [events],
+  );
+
+  if (loading && !events.length) {
+    return (
+      <div className="flex min-h-[240px] items-center justify-center rounded-3xl bg-slate-50 p-10 text-slate-700">
+        Loading events...
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6 p-6">
       <div className="flex flex-col gap-4 rounded-3xl bg-white px-6 py-5 shadow-sm sm:flex-row sm:items-center sm:justify-between">
@@ -20,7 +120,7 @@ const AdminEvents = () => {
           <button
             type="button"
             onClick={() => navigate("/admin/events/new")}
-            className="inline-flex items-center justify-center rounded-3xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+            className="inline-flex items-center justify-center rounded-3xl bg-primary px-4 py-3 text-sm font-semibold text-surface transition hover:bg-secondary"
           >
             Create event
           </button>
@@ -153,7 +253,7 @@ const AdminEvents = () => {
             <tr>
               <th className="px-4 py-4">Event</th>
               <th className="px-4 py-4">Venue & Timing</th>
-              <th className="px-4 py-4">VIP Revenue</th>
+
               <th className="px-4 py-4">Status</th>
               <th className="px-4 py-4 text-right">Action</th>
             </tr>
@@ -192,9 +292,7 @@ const AdminEvents = () => {
                     {new Date(event.dateTime).toLocaleString()}
                   </p>
                 </td>
-                <td className="px-4 py-4 text-slate-900">
-                  ₹{getVipRevenue(event).toLocaleString()}
-                </td>
+
                 <td className="px-4 py-4">
                   <span
                     className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${
@@ -210,7 +308,7 @@ const AdminEvents = () => {
                   <button
                     type="button"
                     onClick={() => handleEdit(event.id)}
-                    className="mr-2 rounded-2xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+                    className="mr-2 rounded-2xl bg-primary px-3 py-2 text-sm font-semibold text-surface transition hover:bg-secondary"
                   >
                     Edit
                   </button>

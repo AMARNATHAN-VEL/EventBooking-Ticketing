@@ -58,14 +58,15 @@ function Router() {
         <Route path="/admin/login" element={<AdminLogin />} />
 
         {/* ================= ADMIN ROUTES ================= */}
-        <Route
+        {/* <Route
           path="/admin"
           element={
             <ProtectedRoute allowedRole="admin">
               <AdminLayout />
             </ProtectedRoute>
           }
-        >
+        > */}
+        <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="events" element={<AdminEvents />} />
           <Route path="events/new" element={<CreateEvent />} />
