@@ -76,7 +76,6 @@
           "price": 1299,
           "status": "available"
         },
-
         {
           "id": "B1",
           "row": "B",
@@ -109,7 +108,6 @@
           "price": 799,
           "status": "available"
         },
-
         {
           "id": "C1",
           "row": "C",
@@ -142,7 +140,6 @@
           "price": 799,
           "status": "available"
         },
-
         {
           "id": "D1",
           "row": "D",
@@ -223,7 +220,6 @@
           "price": 1499,
           "status": "available"
         },
-
         {
           "id": "B1",
           "row": "B",
@@ -256,7 +252,6 @@
           "price": 999,
           "status": "available"
         },
-
         {
           "id": "C1",
           "row": "C",
@@ -337,7 +332,6 @@
           "price": 499,
           "status": "available"
         },
-
         {
           "id": "B1",
           "row": "B",
@@ -370,7 +364,6 @@
           "price": 299,
           "status": "available"
         },
-
         {
           "id": "C1",
           "row": "C",
@@ -412,7 +405,9 @@
       "userId": "usr101",
       "eventId": "evt101",
       "eventTitle": "Chennai Music Night 2026",
-      "seats": ["A2"],
+      "seats": [
+        "A2"
+      ],
       "amount": 1299,
       "paymentStatus": "paid",
       "bookingStatus": "confirmed",
@@ -424,7 +419,10 @@
       "userId": "usr102",
       "eventId": "evt101",
       "eventTitle": "Chennai Music Night 2026",
-      "seats": ["B3", "D3"],
+      "seats": [
+        "B3",
+        "D3"
+      ],
       "amount": 1298,
       "paymentStatus": "paid",
       "bookingStatus": "confirmed",
@@ -436,7 +434,9 @@
       "userId": "usr103",
       "eventId": "evt102",
       "eventTitle": "Startup & Tech Summit",
-      "seats": ["A2"],
+      "seats": [
+        "A2"
+      ],
       "amount": 1499,
       "paymentStatus": "paid",
       "bookingStatus": "confirmed",
@@ -448,7 +448,9 @@
       "userId": "usr101",
       "eventId": "evt103",
       "eventTitle": "IPL Fan Park Screening",
-      "seats": ["A3"],
+      "seats": [
+        "A3"
+      ],
       "amount": 499,
       "paymentStatus": "pending",
       "bookingStatus": "reserved",
@@ -456,30 +458,31 @@
       "createdAt": "2026-04-02T11:45:00"
     }
   ],
-  "analytics":{
-  "totalEvents": 3,
-  "totalBookings": 4,
-  "totalRevenue": 4595,
-  "ticketsSold": 5,
-  "bookingsPerEvent": [
-    {
-      "eventId": "evt101",
-      "title": "Chennai Music Night 2026",
-      "bookings": 2,
-      "revenue": 2597
-    },
-    {
-      "eventId": "evt102",
-      "title": "Startup & Tech Summit",
-      "bookings": 1,
-      "revenue": 1499
-    },
-    {
-      "eventId": "evt103",
-      "title": "IPL Fan Park Screening",
-      "bookings": 1,
-      "revenue": 499
-    }
-  ]
-}
+  "analytics": {
+    "totalEvents": 3,
+    "totalBookings": 4,
+    "totalRevenue": 4595,
+    "ticketsSold": 5,
+    "bookingsPerEvent": [
+      {
+        "eventId": "evt101",
+        "title": "Chennai Music Night 2026",
+        "bookings": 2,
+        "revenue": 2597
+      },
+      {
+        "eventId": "evt102",
+        "title": "Startup & Tech Summit",
+        "bookings": 1,
+        "revenue": 1499
+      },
+      {
+        "eventId": "evt103",
+        "title": "IPL Fan Park Screening",
+        "bookings": 1,
+        "revenue": 499
+      }
+    ]
+  },
+  "$schema": "./node_modules/json-server/schema.json"
 }
