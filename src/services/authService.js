@@ -15,7 +15,10 @@ export const authenticateAdmin = async (username, password) => {
 
   return {
     username: admin.username,
+    name: admin.name || admin.username,
     role: "admin",
     email: admin.email || "admin@example.com",
+    phone: admin.phone || "(555) 123-4567",
+    joined: admin.joined || "January 2025",
   };
 };

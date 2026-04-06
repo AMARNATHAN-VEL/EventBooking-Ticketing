@@ -263,7 +263,7 @@ const EditEvent = () => {
             <button
               type="submit"
               disabled={saving}
-              className="rounded-3xl bg-primary px-5 py-3 text-sm font-semibold text-surface transition hover:bg-secondary disabled:cursor-not-allowed disabled:bg-slate-400"
+              className="rounded-3xl px-5 py-3 text-sm font-semibold btn-primary disabled:cursor-not-allowed disabled:bg-slate-400"
             >
               {saving ? "Saving..." : "Save changes"}
             </button>

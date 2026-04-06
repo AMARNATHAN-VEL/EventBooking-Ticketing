@@ -120,7 +120,7 @@ const AdminEvents = () => {
           <button
             type="button"
             onClick={() => navigate("/admin/events/new")}
-            className="inline-flex items-center justify-center rounded-3xl bg-primary px-4 py-3 text-sm font-semibold text-surface transition hover:bg-secondary"
+            className="inline-flex items-center justify-center rounded-3xl px-4 py-3 text-sm font-semibold btn-primary"
           >
             Create event
           </button>
@@ -308,7 +308,7 @@ const AdminEvents = () => {
                   <button
                     type="button"
                     onClick={() => handleEdit(event.id)}
-                    className="mr-2 rounded-2xl bg-primary px-3 py-2 text-sm font-semibold text-surface transition hover:bg-secondary"
+                    className="mr-2 rounded-2xl px-3 py-2 text-sm font-semibold btn-primary"
                   >
                     Edit
                   </button>

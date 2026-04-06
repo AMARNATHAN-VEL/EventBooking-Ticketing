@@ -2,7 +2,11 @@
 
   "admin": {
     "username": "admin",
-    "password": "admin123"
+    "password": "admin123",
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "phone": "(555) 123-4567",
+    "joined": "January 2025"
   },
 
   "users": [
@@ -403,6 +407,150 @@
           "status": "available"
         }
       ]
+    },
+    {
+      "id": "evt104",
+      "title": "Jananayagan Movie Premiere",
+      "category": "Movie",
+      "venue": "Navarang Theatre",
+      "city": "Chennai",
+      "dateTime": "2026-07-10T20:00:00",
+      "description": "Exclusive premiere of the much-awaited Jananayagan movie with a VIP welcome show.",
+      "price": 499,
+      "posterUrl": "/images/jananayagan-premiere.jpg",
+      "status": "published",
+      "totalSeats": 24,
+      "availableSeats": 18,
+      "seatMap": [
+        { "id": "A1", "row": "A", "number": 1, "type": "Premium", "price": 799, "status": "available" },
+        { "id": "A2", "row": "A", "number": 2, "type": "Premium", "price": 799, "status": "booked" },
+        { "id": "A3", "row": "A", "number": 3, "type": "Premium", "price": 799, "status": "available" },
+        { "id": "B1", "row": "B", "number": 1, "type": "Standard", "price": 499, "status": "available" },
+        { "id": "B2", "row": "B", "number": 2, "type": "Standard", "price": 499, "status": "available" },
+        { "id": "B3", "row": "B", "number": 3, "type": "Standard", "price": 499, "status": "available" },
+        { "id": "C1", "row": "C", "number": 1, "type": "Economy", "price": 299, "status": "available" },
+        { "id": "C2", "row": "C", "number": 2, "type": "Economy", "price": 299, "status": "available" }
+      ]
+    },
+    {
+      "id": "evt105",
+      "title": "Chennai Tech Leaders Forum",
+      "category": "Conference",
+      "venue": "Resume Convention Centre",
+      "city": "Chennai",
+      "dateTime": "2026-08-14T09:30:00",
+      "description": "A day of innovation talks, workshops, and investor networking for technology leaders.",
+      "price": 1199,
+      "posterUrl": "/images/chennai-tech-forum.jpg",
+      "status": "published",
+      "totalSeats": 30,
+      "availableSeats": 25,
+      "seatMap": [
+        { "id": "A1", "row": "A", "number": 1, "type": "VIP", "price": 1499, "status": "available" },
+        { "id": "A2", "row": "A", "number": 2, "type": "VIP", "price": 1499, "status": "available" },
+        { "id": "B1", "row": "B", "number": 1, "type": "Standard", "price": 1199, "status": "available" },
+        { "id": "B2", "row": "B", "number": 2, "type": "Standard", "price": 1199, "status": "booked" },
+        { "id": "C1", "row": "C", "number": 1, "type": "Economy", "price": 799, "status": "available" },
+        { "id": "C2", "row": "C", "number": 2, "type": "Economy", "price": 799, "status": "available" }
+      ]
+    },
+    {
+      "id": "evt106",
+      "title": "Pongal Cultural Festival",
+      "category": "Festival",
+      "venue": "Marina Beach Arena",
+      "city": "Chennai",
+      "dateTime": "2026-01-15T11:00:00",
+      "description": "Celebrate Pongal with live folk performances, artisans, food stalls, and family activities.",
+      "price": 199,
+      "posterUrl": "/images/pongal-festival.jpg",
+      "status": "published",
+      "totalSeats": 50,
+      "availableSeats": 42,
+      "seatMap": [
+        { "id": "A1", "row": "A", "number": 1, "type": "Front", "price": 299, "status": "available" },
+        { "id": "A2", "row": "A", "number": 2, "type": "Front", "price": 299, "status": "available" },
+        { "id": "B1", "row": "B", "number": 1, "type": "General", "price": 199, "status": "available" },
+        { "id": "B2", "row": "B", "number": 2, "type": "General", "price": 199, "status": "available" }
+      ]
+    },
+    {
+      "id": "evt107",
+      "title": "Garden Lights Night Market",
+      "category": "Market",
+      "venue": "Heritage Garden",
+      "city": "Chennai",
+      "dateTime": "2026-09-10T17:00:00",
+      "description": "A curated night market with food trucks, music, craft vendors, and outdoor installations.",
+      "price": 249,
+      "posterUrl": "/images/night-market.jpg",
+      "status": "published",
+      "totalSeats": 40,
+      "availableSeats": 34,
+      "seatMap": [
+        { "id": "A1", "row": "A", "number": 1, "type": "Seated", "price": 299, "status": "available" },
+        { "id": "A2", "row": "A", "number": 2, "type": "Seated", "price": 299, "status": "available" },
+        { "id": "B1", "row": "B", "number": 1, "type": "Standing", "price": 249, "status": "available" },
+        { "id": "B2", "row": "B", "number": 2, "type": "Standing", "price": 249, "status": "available" }
+      ]
+    },
+    {
+      "id": "evt108",
+      "title": "Carnival Jazz Ensemble",
+      "category": "Concert",
+      "venue": "City Opera House",
+      "city": "Chennai",
+      "dateTime": "2026-10-22T18:30:00",
+      "description": "A lively jazz concert featuring local and international artists in a historic venue.",
+      "price": 899,
+      "posterUrl": "/images/carnival-jazz.jpg",
+      "status": "published",
+      "totalSeats": 22,
+      "availableSeats": 17,
+      "seatMap": [
+        { "id": "A1", "row": "A", "number": 1, "type": "Premium", "price": 1199, "status": "available" },
+        { "id": "A2", "row": "A", "number": 2, "type": "Premium", "price": 1199, "status": "booked" },
+        { "id": "B1", "row": "B", "number": 1, "type": "Standard", "price": 899, "status": "available" },
+        { "id": "B2", "row": "B", "number": 2, "type": "Standard", "price": 899, "status": "available" }
+      ]
+    },
+    {
+      "id": "evt109",
+      "title": "Food Truck Fiesta",
+      "category": "Food",
+      "venue": "City Sports Grounds",
+      "city": "Chennai",
+      "dateTime": "2026-11-18T12:00:00",
+      "description": "A weekend of street food, pop-up vendors, and live acoustic music.",
+      "price": 149,
+      "posterUrl": "/images/food-truck-fiesta.jpg",
+      "status": "published",
+      "totalSeats": 40,
+      "availableSeats": 35,
+      "seatMap": [
+        { "id": "A1", "row": "A", "number": 1, "type": "General", "price": 149, "status": "available" },
+        { "id": "A2", "row": "A", "number": 2, "type": "General", "price": 149, "status": "available" },
+        { "id": "B1", "row": "B", "number": 1, "type": "General", "price": 149, "status": "available" }
+      ]
+    },
+    {
+      "id": "evt110",
+      "title": "Summer Wellness Retreat",
+      "category": "Wellness",
+      "venue": "Seaside Retreat Centre",
+      "city": "Mahabalipuram",
+      "dateTime": "2026-12-05T08:00:00",
+      "description": "A morning wellness retreat with yoga, meditation, and healthy brunch by the sea.",
+      "price": 599,
+      "posterUrl": "/images/wellness-retreat.jpg",
+      "status": "published",
+      "totalSeats": 28,
+      "availableSeats": 22,
+      "seatMap": [
+        { "id": "A1", "row": "A", "number": 1, "type": "Wellness", "price": 599, "status": "available" },
+        { "id": "A2", "row": "A", "number": 2, "type": "Wellness", "price": 599, "status": "available" },
+        { "id": "B1", "row": "B", "number": 1, "type": "Wellness", "price": 599, "status": "available" }
+      ]
     }
   ],
   "booking": [
@@ -465,7 +613,7 @@
     }
   ],
   "analytics": {
-    "totalEvents": 3,
+    "totalEvents": 10,
     "totalBookings": 4,
     "totalRevenue": 4595,
     "ticketsSold": 5,

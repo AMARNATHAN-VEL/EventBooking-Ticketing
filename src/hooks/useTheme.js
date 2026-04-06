@@ -28,13 +28,8 @@ const useTheme = () => {
     // Apply theme to document element
     const root = document.documentElement;
 
-    if (theme === "light") {
-      root.setAttribute("data-theme", "light");
-      root.style.colorScheme = "light";
-    } else {
-      root.removeAttribute("data-theme");
-      root.style.colorScheme = "dark";
-    }
+    root.setAttribute("data-theme", theme);
+    root.style.colorScheme = theme;
 
     // Store preference
     localStorage.setItem("theme", theme);
