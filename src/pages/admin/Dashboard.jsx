@@ -106,9 +106,7 @@ const Dashboard = () => {
     URL.revokeObjectURL(url);
   };
 
-  const handleSendUserBlast = () => {
-    window.alert("User blast sent to all active users.");
-  };
+
 
   const handleViewAllBookings = () => navigate("/admin/bookings");
 
@@ -139,7 +137,7 @@ const Dashboard = () => {
   const actions = [
     { label: "Create New Event", description: "Launch a new event listing.", accent: true, action: handleCreateEvent },
     { label: "Export Data", description: "Download sales and booking reports.", action: handleExportData },
-    { label: "Send User Blast", description: "Notify users about updates and alerts.", action: handleSendUserBlast },
+
   ];
 
   return (
@@ -150,16 +148,6 @@ const Dashboard = () => {
             <p className={`text-sm uppercase tracking-[0.3em] ${isDark ? "text-white" : "text-cyan-700/80"}`}>Admin Dashboard</p>
             <h2 className={`mt-3 text-3xl font-semibold ${isDark ? "text-white" : "text-slate-900"}`}>Welcome back, Admin</h2>
             <p className={`mt-2 text-sm ${isDark ? "text-white" : "text-slate-600"}`}>Overview of event bookings and revenue.</p>
-          </div>
-          <div className={`flex items-center gap-3 rounded-3xl border px-4 py-3 shadow-sm ${isDark ? "border-slate-800 bg-[#091124] text-white" : "border-slate-200 bg-slate-50 text-slate-700"}`}>
-            <svg className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-600"}`} viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10.5 3.5a1.5 1.5 0 0 1 3 0v1h3.25A2.25 2.25 0 0 1 19 7.75v10.5A2.25 2.25 0 0 1 16.75 20.5H7.25A2.25 2.25 0 0 1 5 18.25V7.75A2.25 2.25 0 0 1 7.25 5.5H10.5V3.5Zm1.5 3.5h-3V4.5h3v2.5Zm5.5 12.25a.75.75 0 0 0 0-1.5H7.5a.75.75 0 0 0 0 1.5h10Zm0-4a.75.75 0 0 0 0-1.5H7.5a.75.75 0 0 0 0 1.5h10Z" />
-            </svg>
-            <input
-              type="search"
-              placeholder="Search events..."
-              className={`min-w-55 bg-transparent text-sm outline-none ${isDark ? "text-white placeholder:text-white" : "text-slate-700 placeholder:text-slate-400"}`}
-            />
           </div>
         </div>
       </div>
@@ -226,10 +214,7 @@ const Dashboard = () => {
               </button>
             ))}
           </div>
-          <div className={`rounded-3xl p-4 text-sm ${isDark ? "border border-slate-700 bg-slate-900 text-white" : "border border-slate-200 bg-slate-50 text-slate-600"}`}>
-            <p className={`text-xs uppercase tracking-[0.3em] ${isDark ? "text-white" : "text-slate-500"}`}>Platform Status</p>
-            <p className={`mt-3 text-base font-semibold ${isDark ? "text-white" : "text-slate-900"}`}>All Systems Operational</p>
-          </div>
+
         </div>
       </div>
 
